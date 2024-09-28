@@ -1,0 +1,8 @@
+{
+  "short_name": "Live Wildfire Tracker",
+  "name": "Live Wildfire Tracker by Sumod",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

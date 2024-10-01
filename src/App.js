@@ -1,33 +1,29 @@
-import { useState, useEffect } from 'react'
-import axios from 'axios'
-import Map from './components/Map'
-import Loader from './components/Loader'
-import Header from './components/Header'
+import { useState, useEffect } from 'react'; // Removed axios import
+import Map from './components/Map';
+import Loader from './components/Loader';
+import Header from './components/Header';
 
 function App() {
-  const [eventData, setEventData] = useState([])
-  const [loading, setLoading] = useState(false)
+  const [eventData, setEventData] = useState([]);
+  const [loading, setLoading] = useState(false);
 
-  
   useEffect(() => {
     const fetchEvents = async () => {
-      setLoading(true)
+      setLoading(true);
       const res = await fetch('https://eonet.gsfc.nasa.gov/api/v2.1/events');
       const { events } = await res.json();
 
       setEventData(events);
       setLoading(false);
-    }
+    };
     fetchEvents();
     console.log(eventData);
-  },[])
-
-
+  }, []); // Keep the dependency array empty to avoid unnecessary re-renders
 
   return (
     <div>
       <Header />
-      { !loading ? <Map eventData={eventData} /> : <Loader /> }
+      {!loading ? <Map eventData={eventData} /> : <Loader />}
     </div>
   );
 }

@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/FlareMap/static/css/main.236be589.css",
+    "main.js": "/FlareMap/static/js/main.28e9d345.js",
+    "static/js/422.22e3584e.chunk.js": "/FlareMap/static/js/422.22e3584e.chunk.js",
+    "static/media/spinner.gif": "/FlareMap/static/media/spinner.93dcce2536dbb84ee03d.gif",
+    "index.html": "/FlareMap/index.html",
+    "main.236be589.css.map": "/FlareMap/static/css/main.236be589.css.map",
+    "main.28e9d345.js.map": "/FlareMap/static/js/main.28e9d345.js.map",
+    "422.22e3584e.chunk.js.map": "/FlareMap/static/js/422.22e3584e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.236be589.css",
+    "static/js/main.28e9d345.js"
+  ]
+}

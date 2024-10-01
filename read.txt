@@ -1,3 +1,0 @@
-npm i
-add .env file
-npm start

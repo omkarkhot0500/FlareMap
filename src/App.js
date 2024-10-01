@@ -1,14 +1,12 @@
-import { useState, useEffect } from 'react'
-import axios from 'axios'
-import Map from './components/Map'
-import Loader from './components/Loader'
-import Header from './components/Header'
+import { useState, useEffect } from 'react'; // Removed axios import
+import Map from './components/Map';
+import Loader from './components/Loader';
+import Header from './components/Header';
 
 function App() {
-  const [eventData, setEventData] = useState([])
-  const [loading, setLoading] = useState(false)
+  const [eventData, setEventData] = useState([]);
+  const [loading, setLoading] = useState(false);
 
-  
   useEffect(() => {
     const fetchEvents = async () => {
       setLoading(true);
@@ -19,16 +17,12 @@ function App() {
       setLoading(false);
     };
     fetchEvents();
-    console.log(eventData);
-  }, []);
-  
-
-
+  }, []); // Dependency array remains empty to avoid an infinite loop
 
   return (
     <div>
       <Header />
-      { !loading ? <Map eventData={eventData} /> : <Loader /> }
+      {!loading ? <Map eventData={eventData} /> : <Loader />}
     </div>
   );
 }
